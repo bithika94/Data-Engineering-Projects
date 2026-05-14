@@ -208,10 +208,10 @@ def create_summary_report(df):
     region_count = df.groupBy("region").count().count()
     
     summary = {
-        "total_orders": total_orders,
-        "unique_customers": unique_customers,
-        "unique_products": unique_products,
-        "total_revenue": total_revenue,
+        "total_orders": date_stats["total_orders"],
+        "unique_customers": date_stats["unique_customers"],
+        "unique_products": date_stats["unique_products"],
+        "total_revenue": date_stats["total_revenue"],
         "date_range": f"{date_stats['earliest']} to {date_stats['latest']}",
         "regions": region_count
     }
